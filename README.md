@@ -47,4 +47,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 - [Next.js](https://nextjs.org) 16 + TypeScript
 - [Tailwind CSS](https://tailwindcss.com) v4
-- [Groq API](https://groq.com) for AI squad rating (Llama 3.1 8B)
+- [Groq API](https://groq.com) for AI squad rating (Qwen 3.6 27B)
