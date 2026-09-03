@@ -249,6 +249,7 @@ export default function Home() {
                                     src={player.image}
                                     alt={player.name}
                                     fill
+                                    unoptimized
                                     className="object-cover"
                                     sizes="80px"
                                   />
@@ -479,6 +480,7 @@ export default function Home() {
                                   alt={player.name}
                                   width={40}
                                   height={40}
+                                  unoptimized
                                   className="w-full h-full object-cover"
                                 />
                               ) : (
