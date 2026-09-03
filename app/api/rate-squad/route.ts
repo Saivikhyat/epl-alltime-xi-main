@@ -71,6 +71,7 @@ Return ONLY the JSON object, no markdown or additional text.`,
             },
           ],
           temperature: 0.7,
+          max_tokens: 4096,
         }),
       }
     );
@@ -96,7 +97,7 @@ Return ONLY the JSON object, no markdown or additional text.`,
       );
     }
 
-    const content = data.choices?.[0]?.message?.content;
+    let content = data.choices?.[0]?.message?.content;
 
     if (!content) {
       return NextResponse.json(
@@ -104,6 +105,8 @@ Return ONLY the JSON object, no markdown or additional text.`,
         { status: 502 }
       );
     }
+
+    content = content.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
 
     let aiResponse: AIResponse;
     try {
