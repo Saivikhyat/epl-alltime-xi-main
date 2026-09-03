@@ -35,16 +35,16 @@ export async function POST(request: Request) {
       .map((p) => `${p.name} (${p.position}, ${p.club})`)
       .join(", ");
 
-    const apiKey = process.env.TOKENROUTER_API_KEY;
+    const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
-        { error: "TOKENROUTER_API_KEY not configured" },
+        { error: "OPENAI_API_KEY not configured" },
         { status: 500 }
       );
     }
 
     const response = await fetch(
-      "https://api.tokenrouter.io/v1/chat/completions",
+      "https://api.openai.com/v1/chat/completions",
       {
         method: "POST",
         headers: {
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "gpt-4",
+          model: "gpt-3.5-turbo",
           messages: [
             {
               role: "system",
@@ -75,21 +75,32 @@ Return ONLY the JSON object, no markdown or additional text.`,
       }
     );
 
+    const responseText = await response.text();
+    console.log("API Response Status:", response.status);
+    console.log("API Response Body:", responseText);
+
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("TokenRouter API error:", errorText);
       return NextResponse.json(
-        { error: "Failed to get AI rating" },
+        { error: `API error (${response.status}): ${responseText}` },
         { status: 502 }
       );
     }
 
-    const data = await response.json();
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid JSON from API", raw: responseText },
+        { status: 502 }
+      );
+    }
+
     const content = data.choices?.[0]?.message?.content;
 
     if (!content) {
       return NextResponse.json(
-        { error: "No response from AI model" },
+        { error: "No content in API response", data },
         { status: 502 }
       );
     }
@@ -106,7 +117,7 @@ Return ONLY the JSON object, no markdown or additional text.`,
       };
     } catch {
       return NextResponse.json(
-        { error: "Invalid AI response format" },
+        { error: "Invalid AI response format", raw: content },
         { status: 502 }
       );
     }
