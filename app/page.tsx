@@ -7,6 +7,7 @@ interface Player {
   id: number;
   name: string;
   position: string;
+  altPositions: string[];
   club: string;
   rating: number;
 }
@@ -89,14 +90,21 @@ export default function Home() {
       squad.filter((p): p is Player => p !== null).map((p) => p.id)
     );
     const q = searchQuery.toLowerCase();
-    return players.filter(
-      (p) =>
-        !usedPlayerIds.has(p.id) &&
-        (p.name.toLowerCase().includes(q) ||
-          p.position.toLowerCase().includes(q) ||
-          p.club.toLowerCase().includes(q))
-    );
-  }, [players, squad, searchQuery]);
+    const slotPosition = selectedSlot !== null ? PITCH_LAYOUT[selectedSlot].position : null;
+
+    return players.filter((p) => {
+      if (usedPlayerIds.has(p.id)) return false;
+      const fitsPosition = slotPosition
+        ? p.position === slotPosition || p.altPositions.includes(slotPosition)
+        : true;
+      const matchesSearch =
+        p.name.toLowerCase().includes(q) ||
+        p.position.toLowerCase().includes(q) ||
+        p.altPositions.some((ap) => ap.toLowerCase().includes(q)) ||
+        p.club.toLowerCase().includes(q);
+      return fitsPosition && matchesSearch;
+    });
+  }, [players, squad, searchQuery, selectedSlot]);
 
   const handleSlotClick = (slotIndex: number) => {
     setSelectedSlot(slotIndex === selectedSlot ? null : slotIndex);
@@ -364,7 +372,9 @@ export default function Home() {
               <div className="px-5 py-4 border-b border-white/[0.06]">
                 <div className="flex items-center justify-between mb-3">
                   <h2 className="text-sm font-bold text-white uppercase tracking-widest">
-                    Player Pool
+                    {selectedSlot !== null
+                      ? `Select ${PITCH_LAYOUT[selectedSlot].label}`
+                      : "Player Pool"}
                   </h2>
                   <span className="text-xs text-slate-500 font-medium">
                     {filteredPlayers.length} available
@@ -396,22 +406,24 @@ export default function Home() {
                 </div>
 
                 {/* Filter Chips */}
-                <div className="flex flex-wrap gap-1.5 mt-3">
-                  {(["All", "GK", "CB", "LB", "RB", "CDM", "CM", "CAM", "LW", "RW", "ST"] as const).map((filter) => (
-                    <button
-                      key={filter}
-                      onClick={() => setSearchQuery(filter === "All" ? "" : filter)}
-                      className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
-                        (filter === "All" && searchQuery === "") ||
-                        searchQuery === filter
-                          ? "bg-purple-600 text-white shadow-sm shadow-purple-500/25"
-                          : "bg-white/[0.04] text-slate-400 hover:bg-white/[0.08] hover:text-white"
-                      }`}
-                    >
-                      {filter}
-                    </button>
-                  ))}
-                </div>
+                {selectedSlot === null && (
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {(["All", "GK", "CB", "LB", "RB", "CDM", "CM", "CAM", "LW", "RW", "ST"] as const).map((filter) => (
+                      <button
+                        key={filter}
+                        onClick={() => setSearchQuery(filter === "All" ? "" : filter)}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
+                          (filter === "All" && searchQuery === "") ||
+                          searchQuery === filter
+                            ? "bg-purple-600 text-white shadow-sm shadow-purple-500/25"
+                            : "bg-white/[0.04] text-slate-400 hover:bg-white/[0.08] hover:text-white"
+                        }`}
+                      >
+                        {filter}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Player List */}
@@ -450,6 +462,14 @@ export default function Home() {
                                 <span className={`text-[10px] font-bold uppercase tracking-wider ${posColor.text}`}>
                                   {player.position}
                                 </span>
+                                {player.altPositions.length > 0 && (
+                                  <>
+                                    <span className="text-[10px] text-slate-600">•</span>
+                                    <span className="text-[9px] text-slate-500">
+                                      {player.altPositions.join(", ")}
+                                    </span>
+                                  </>
+                                )}
                                 <span className="text-[10px] text-slate-600">•</span>
                                 <span className="text-[11px] text-slate-500 truncate">
                                   {player.club}
