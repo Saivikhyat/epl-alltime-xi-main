@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Peter Schmeichel",
+    "position": "GK",
+    "club": "Manchester United",
+    "rating": 9.5
+  },
+  {
+    "id": 2,
+    "name": "Rio Ferdinand",
+    "position": "CB",
+    "club": "Manchester United",
+    "rating": 9.2
+  },
+  {
+    "id": 3,
+    "name": "John Terry",
+    "position": "CB",
+    "club": "Chelsea",
+    "rating": 9.3
+  },
+  {
+    "id": 4,
+    "name": "Virgil van Dijk",
+    "position": "CB",
+    "club": "Liverpool",
+    "rating": 9.4
+  },
+  {
+    "id": 5,
+    "name": "Ashley Cole",
+    "position": "LB",
+    "club": "Arsenal/Chelsea",
+    "rating": 9.1
+  },
+  {
+    "id": 6,
+    "name": "Gary Neville",
+    "position": "RB",
+    "club": "Manchester United",
+    "rating": 8.8
+  },
+  {
+    "id": 7,
+    "name": "Patrick Vieira",
+    "position": "CDM",
+    "club": "Arsenal",
+    "rating": 9.3
+  },
+  {
+    "id": 8,
+    "name": "Steven Gerrard",
+    "position": "CM",
+    "club": "Liverpool",
+    "rating": 9.6
+  },
+  {
+    "id": 9,
+    "name": "Frank Lampard",
+    "position": "CM",
+    "club": "Chelsea",
+    "rating": 9.4
+  },
+  {
+    "id": 10,
+    "name": "Thierry Henry",
+    "position": "LW",
+    "club": "Arsenal",
+    "rating": 9.8
+  },
+  {
+    "id": 11,
+    "name": "Cristiano Ronaldo",
+    "position": "RW",
+    "club": "Manchester United",
+    "rating": 9.7
+  },
+  {
+    "id": 12,
+    "name": "Alan Shearer",
+    "position": "ST",
+    "club": "Newcastle United",
+    "rating": 9.5
+  },
+  {
+    "id": 13,
+    "name": "Dennis Bergkamp",
+    "position": "CAM",
+    "club": "Arsenal",
+    "rating": 9.3
+  },
+  {
+    "id": 14,
+    "name": "Robert Pires",
+    "position": "LW",
+    "club": "Arsenal",
+    "rating": 8.9
+  },
+  {
+    "id": 15,
+    "name": "Paul Scholes",
+    "position": "CM",
+    "club": "Manchester United",
+    "rating": 9.2
+  }
+]
