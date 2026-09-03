@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import playersData from "../data/players.json";
 
 interface Player {
@@ -10,6 +11,7 @@ interface Player {
   altPositions: string[];
   club: string;
   rating: number;
+  image: string | null;
 }
 
 interface AIResponse {
@@ -233,23 +235,40 @@ export default function Home() {
                       >
                         {player ? (
                           <div
-                            className={`relative w-[76px] rounded-xl overflow-hidden transition-all duration-300 cursor-pointer ${
+                            className={`relative w-[80px] rounded-xl overflow-hidden transition-all duration-300 cursor-pointer ${
                               isSelected
                                 ? "scale-110 ring-2 ring-yellow-400 shadow-lg shadow-yellow-400/30"
                                 : "hover:scale-105 hover:shadow-lg hover:shadow-black/40"
                             }`}
                           >
-                            <div className="bg-[#1a2332] backdrop-blur-sm border border-white/10 rounded-xl px-2 py-2.5 flex flex-col items-center gap-0.5">
-                              <div
-                                className={`w-full h-1 rounded-full ${posColor.bg} opacity-80 mb-1`}
-                              />
-                              <span className="text-white font-bold text-[13px] leading-tight text-center truncate w-full">
-                                {player.name.split(" ").pop()}
-                              </span>
-                              <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">
-                                {player.position}
-                              </span>
-                              <RatingBadge rating={player.rating} />
+                            <div className="bg-[#1a2332] backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden flex flex-col items-center">
+                              <div className={`w-full h-1 rounded-full ${posColor.bg} opacity-80`} />
+                              <div className="relative w-full aspect-square overflow-hidden bg-slate-800">
+                                {player.image ? (
+                                  <Image
+                                    src={player.image}
+                                    alt={player.name}
+                                    fill
+                                    className="object-cover"
+                                    sizes="80px"
+                                  />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-800">
+                                    <span className="text-xl font-bold text-white/60">
+                                      {player.name.split(" ").map(n => n[0]).join("")}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+                              <div className="px-1.5 py-1.5 flex flex-col items-center gap-0.5">
+                                <span className="text-white font-bold text-[11px] leading-tight text-center truncate w-full">
+                                  {player.name.split(" ").pop()}
+                                </span>
+                                <span className="text-[9px] text-slate-400 font-medium uppercase tracking-wider">
+                                  {player.position}
+                                </span>
+                                <RatingBadge rating={player.rating} />
+                              </div>
                             </div>
                             <button
                               onClick={(e) => handleRemovePlayer(layout.slot, e)}
@@ -260,7 +279,7 @@ export default function Home() {
                           </div>
                         ) : (
                           <div
-                            className={`w-[76px] h-[88px] rounded-xl border-2 border-dashed flex flex-col items-center justify-center transition-all duration-300 cursor-pointer ${
+                            className={`w-[80px] h-[88px] rounded-xl border-2 border-dashed flex flex-col items-center justify-center transition-all duration-300 cursor-pointer ${
                               isSelected
                                 ? "border-yellow-400 bg-yellow-400/10 shadow-lg shadow-yellow-400/20 scale-105"
                                 : "border-white/15 bg-white/[0.03] hover:border-white/30 hover:bg-white/[0.06]"
@@ -453,7 +472,23 @@ export default function Home() {
                           }`}
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`w-1 h-10 rounded-full ${posColor.bg} opacity-60`} />
+                            <div className={`w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-slate-800 ring-1 ring-white/10`}>
+                              {player.image ? (
+                                <Image
+                                  src={player.image}
+                                  alt={player.name}
+                                  width={40}
+                                  height={40}
+                                  className="w-full h-full object-cover"
+                                />
+                              ) : (
+                                <div className={`w-full h-full flex items-center justify-center ${posColor.bg} bg-opacity-30`}>
+                                  <span className="text-xs font-bold text-white/70">
+                                    {player.name.split(" ").map(n => n[0]).join("")}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
                             <div className="flex-1 min-w-0">
                               <div className="font-semibold text-white text-[13px] truncate">
                                 {player.name}

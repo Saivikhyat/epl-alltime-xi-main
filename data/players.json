@@ -1,52 +1,548 @@
 [
-  { "id": 1, "name": "Peter Schmeichel", "position": "GK", "altPositions": [], "club": "Manchester United", "rating": 94 },
-  { "id": 2, "name": "Petr Cech", "position": "GK", "altPositions": [], "club": "Chelsea", "rating": 93 },
-  { "id": 3, "name": "Edwin van der Sar", "position": "GK", "altPositions": [], "club": "Manchester United", "rating": 90 },
-  { "id": 4, "name": "David Seaman", "position": "GK", "altPositions": [], "club": "Arsenal", "rating": 89 },
-  { "id": 5, "name": "Alisson Becker", "position": "GK", "altPositions": [], "club": "Liverpool", "rating": 92 },
-  { "id": 6, "name": "Rio Ferdinand", "position": "CB", "altPositions": [], "club": "Manchester United", "rating": 92 },
-  { "id": 7, "name": "John Terry", "position": "CB", "altPositions": [], "club": "Chelsea", "rating": 93 },
-  { "id": 8, "name": "Virgil van Dijk", "position": "CB", "altPositions": [], "club": "Liverpool", "rating": 94 },
-  { "id": 9, "name": "Nemanja Vidic", "position": "CB", "altPositions": [], "club": "Manchester United", "rating": 91 },
-  { "id": 10, "name": "Sol Campbell", "position": "CB", "altPositions": ["RB"], "club": "Arsenal", "rating": 89 },
-  { "id": 11, "name": "Tony Adams", "position": "CB", "altPositions": ["RB"], "club": "Arsenal", "rating": 90 },
-  { "id": 12, "name": "Ashley Cole", "position": "LB", "altPositions": ["CB"], "club": "Arsenal/Chelsea", "rating": 91 },
-  { "id": 13, "name": "Patrice Evra", "position": "LB", "altPositions": ["CB"], "club": "Manchester United", "rating": 88 },
-  { "id": 14, "name": "Leighton Baines", "position": "LB", "altPositions": ["LM"], "club": "Everton", "rating": 86 },
-  { "id": 15, "name": "Gary Neville", "position": "RB", "altPositions": [], "club": "Manchester United", "rating": 88 },
-  { "id": 16, "name": "Trent Alexander-Arnold", "position": "RB", "altPositions": ["CM", "RW"], "club": "Liverpool", "rating": 90 },
-  { "id": 17, "name": "Kyle Walker", "position": "RB", "altPositions": ["CB"], "club": "Manchester City", "rating": 87 },
-  { "id": 18, "name": "Cesar Azpilicueta", "position": "RB", "altPositions": ["CB", "LB"], "club": "Chelsea", "rating": 86 },
-  { "id": 19, "name": "Jamie Carragher", "position": "CB", "altPositions": ["RB"], "club": "Liverpool", "rating": 87 },
-  { "id": 20, "name": "Paul McGrath", "position": "CB", "altPositions": ["CDM"], "club": "Aston Villa", "rating": 89 },
-  { "id": 21, "name": "Patrick Vieira", "position": "CDM", "altPositions": ["CB", "CM"], "club": "Arsenal", "rating": 93 },
-  { "id": 22, "name": "Claude Makelele", "position": "CDM", "altPositions": ["CB"], "club": "Chelsea", "rating": 88 },
-  { "id": 23, "name": "Roy Keane", "position": "CDM", "altPositions": ["CM"], "club": "Manchester United", "rating": 91 },
-  { "id": 24, "name": "Steven Gerrard", "position": "CM", "altPositions": ["CDM", "CAM", "RW"], "club": "Liverpool", "rating": 95 },
-  { "id": 25, "name": "Frank Lampard", "position": "CM", "altPositions": ["CAM"], "club": "Chelsea", "rating": 93 },
-  { "id": 26, "name": "Paul Scholes", "position": "CM", "altPositions": ["CAM", "CDM"], "club": "Manchester United", "rating": 92 },
-  { "id": 27, "name": "Kevin De Bruyne", "position": "CM", "altPositions": ["CAM", "RW"], "club": "Manchester City", "rating": 94 },
-  { "id": 28, "name": "David Silva", "position": "CAM", "altPositions": ["CM", "LW"], "club": "Manchester City", "rating": 91 },
-  { "id": 29, "name": "Michael Carrick", "position": "CM", "altPositions": ["CDM"], "club": "Manchester United", "rating": 87 },
-  { "id": 30, "name": "Bryan Robson", "position": "CM", "altPositions": ["CDM", "CAM"], "club": "Manchester United", "rating": 90 },
-  { "id": 31, "name": "Graeme Souness", "position": "CM", "altPositions": ["CDM"], "club": "Liverpool", "rating": 90 },
-  { "id": 32, "name": "Yaya Toure", "position": "CM", "altPositions": ["CDM", "CAM"], "club": "Manchester City", "rating": 90 },
-  { "id": 33, "name": "Thierry Henry", "position": "ST", "altPositions": ["LW", "CAM"], "club": "Arsenal", "rating": 95 },
-  { "id": 34, "name": "Alan Shearer", "position": "ST", "altPositions": [], "club": "Newcastle United", "rating": 94 },
-  { "id": 35, "name": "Wayne Rooney", "position": "ST", "altPositions": ["CAM", "CM"], "club": "Manchester United", "rating": 93 },
-  { "id": 36, "name": "Cristiano Ronaldo", "position": "LW", "altPositions": ["ST", "RW"], "club": "Manchester United", "rating": 95 },
-  { "id": 37, "name": "Mohamed Salah", "position": "RW", "altPositions": ["ST", "LW"], "club": "Liverpool", "rating": 92 },
-  { "id": 38, "name": "Eden Hazard", "position": "LW", "altPositions": ["CAM", "RW"], "club": "Chelsea", "rating": 91 },
-  { "id": 39, "name": "Sergio Aguero", "position": "ST", "altPositions": ["LW"], "club": "Manchester City", "rating": 93 },
-  { "id": 40, "name": "Dennis Bergkamp", "position": "CAM", "altPositions": ["ST", "CM"], "club": "Arsenal", "rating": 92 },
-  { "id": 41, "name": "Robert Pires", "position": "LW", "altPositions": ["RW", "CAM"], "club": "Arsenal", "rating": 89 },
-  { "id": 42, "name": "Robbie Fowler", "position": "ST", "altPositions": ["RW"], "club": "Liverpool", "rating": 88 },
-  { "id": 43, "name": "Les Ferdinand", "position": "ST", "altPositions": [], "club": "Newcastle United", "rating": 87 },
-  { "id": 44, "name": "Dwight Yorke", "position": "ST", "altPositions": ["CAM"], "club": "Manchester United", "rating": 87 },
-  { "id": 45, "name": "Michael Owen", "position": "ST", "altPositions": ["RW"], "club": "Liverpool", "rating": 89 },
-  { "id": 46, "name": "Sadio Mane", "position": "LW", "altPositions": ["ST", "RW"], "club": "Liverpool", "rating": 90 },
-  { "id": 47, "name": "Harry Kane", "position": "ST", "altPositions": ["CAM"], "club": "Tottenham Hotspur", "rating": 91 },
-  { "id": 48, "name": "Gareth Bale", "position": "LW", "altPositions": ["RW", "ST"], "club": "Tottenham Hotspur", "rating": 89 },
-  { "id": 49, "name": "Son Heung-min", "position": "LW", "altPositions": ["ST", "RW"], "club": "Tottenham Hotspur", "rating": 88 },
-  { "id": 50, "name": "Robin van Persie", "position": "ST", "altPositions": ["LW"], "club": "Arsenal/Manchester United", "rating": 90 }
+  {
+    "id": 1,
+    "name": "Peter Schmeichel",
+    "position": "GK",
+    "altPositions": [],
+    "club": "Manchester United",
+    "rating": 94,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Peter_Schmeichel_2012-01-25_001.jpg/300px-Peter_Schmeichel_2012-01-25_001.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Petr Cech",
+    "position": "GK",
+    "altPositions": [],
+    "club": "Chelsea",
+    "rating": 93,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Arsenal_players_training_before_2019_UEFA_Europa_League_final_07_%28cropped%29.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Edwin van der Sar",
+    "position": "GK",
+    "altPositions": [],
+    "club": "Manchester United",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Edwin_van_der_Sar_2015.jpg/300px-Edwin_van_der_Sar_2015.jpg"
+  },
+  {
+    "id": 4,
+    "name": "David Seaman",
+    "position": "GK",
+    "altPositions": [],
+    "club": "Arsenal",
+    "rating": 89,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/David_Seaman.jpg/300px-David_Seaman.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Alisson Becker",
+    "position": "GK",
+    "altPositions": [],
+    "club": "Liverpool",
+    "rating": 92,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Alisson_Becker_Brazil_V_Morocco_13_June_2026-117_%28cropped%29.jpg/300px-Alisson_Becker_Brazil_V_Morocco_13_June_2026-117_%28cropped%29.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rio Ferdinand",
+    "position": "CB",
+    "altPositions": [],
+    "club": "Manchester United",
+    "rating": 92,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Web_Summit_2015_-_Dublin%2C_Ireland_-_22183056474_%28cropped%29.jpg/300px-Web_Summit_2015_-_Dublin%2C_Ireland_-_22183056474_%28cropped%29.jpg"
+  },
+  {
+    "id": 7,
+    "name": "John Terry",
+    "position": "CB",
+    "altPositions": [],
+    "club": "Chelsea",
+    "rating": 93,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/John_Terry_at_pro-am_Wentworth_golf_course_September_2023_%28cropped%29.jpg/300px-John_Terry_at_pro-am_Wentworth_golf_course_September_2023_%28cropped%29.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Virgil van Dijk",
+    "position": "CB",
+    "altPositions": [],
+    "club": "Liverpool",
+    "rating": 94,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/20160604_AUT_NED_8876_%28cropped%29.jpg/300px-20160604_AUT_NED_8876_%28cropped%29.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Nemanja Vidic",
+    "position": "CB",
+    "altPositions": [],
+    "club": "Manchester United",
+    "rating": 91,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Vidi%C4%87_%28cropped%29.jpg/300px-Vidi%C4%87_%28cropped%29.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Sol Campbell",
+    "position": "CB",
+    "altPositions": [
+      "RB"
+    ],
+    "club": "Arsenal",
+    "rating": 89,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sol_Campbell_%2854921202604%29_%28cropped%29.jpg/300px-Sol_Campbell_%2854921202604%29_%28cropped%29.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Tony Adams",
+    "position": "CB",
+    "altPositions": [
+      "RB"
+    ],
+    "club": "Arsenal",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Tony_Adams_2017_portrait_%28cropped%29.jpg/300px-Tony_Adams_2017_portrait_%28cropped%29.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Ashley Cole",
+    "position": "LB",
+    "altPositions": [
+      "CB"
+    ],
+    "club": "Arsenal/Chelsea",
+    "rating": 91,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/ACole.JPG"
+  },
+  {
+    "id": 13,
+    "name": "Patrice Evra",
+    "position": "LB",
+    "altPositions": [
+      "CB"
+    ],
+    "club": "Manchester United",
+    "rating": 88,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Patrice_Evra_%2852472689279%29_%28cropped%29.jpg/300px-Patrice_Evra_%2852472689279%29_%28cropped%29.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Leighton Baines",
+    "position": "LB",
+    "altPositions": [
+      "LM"
+    ],
+    "club": "Everton",
+    "rating": 86,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Baines_Leighton_126176_%28cropped%29.jpg/300px-Baines_Leighton_126176_%28cropped%29.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Gary Neville",
+    "position": "RB",
+    "altPositions": [],
+    "club": "Manchester United",
+    "rating": 88,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Gary_Neville_2014_%28cropped%29.jpg/300px-Gary_Neville_2014_%28cropped%29.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Trent Alexander-Arnold",
+    "position": "RB",
+    "altPositions": [
+      "CM",
+      "RW"
+    ],
+    "club": "Liverpool",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Trent_Alexander-Arnold_2018_%28cropped%29.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Kyle Walker",
+    "position": "RB",
+    "altPositions": [
+      "CB"
+    ],
+    "club": "Manchester City",
+    "rating": 87,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kyle_Walker.jpg/300px-Kyle_Walker.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Cesar Azpilicueta",
+    "position": "RB",
+    "altPositions": [
+      "CB",
+      "LB"
+    ],
+    "club": "Chelsea",
+    "rating": 86,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/C%C3%A9sar_Azpilicueta%2C_Al_Hilal_SFC_vs_Chelsea_F.C.%2C_9_February_2022.jpg/300px-C%C3%A9sar_Azpilicueta%2C_Al_Hilal_SFC_vs_Chelsea_F.C.%2C_9_February_2022.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Jamie Carragher",
+    "position": "CB",
+    "altPositions": [
+      "RB"
+    ],
+    "club": "Liverpool",
+    "rating": 87,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Football_against_poverty_2014_-_Jamie_Carragher_%28cropped%29.jpg/300px-Football_against_poverty_2014_-_Jamie_Carragher_%28cropped%29.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Paul McGrath",
+    "position": "CB",
+    "altPositions": [
+      "CDM"
+    ],
+    "club": "Aston Villa",
+    "rating": 89,
+    "image": null
+  },
+  {
+    "id": 21,
+    "name": "Patrick Vieira",
+    "position": "CDM",
+    "altPositions": [
+      "CB",
+      "CM"
+    ],
+    "club": "Arsenal",
+    "rating": 93,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Patrick_Vieira_NYCFC_%28cropped%29.JPG/300px-Patrick_Vieira_NYCFC_%28cropped%29.JPG"
+  },
+  {
+    "id": 22,
+    "name": "Claude Makelele",
+    "position": "CDM",
+    "altPositions": [
+      "CB"
+    ],
+    "club": "Chelsea",
+    "rating": 88,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Claude_Mak%C3%A9l%C3%A9l%C3%A9_%2853557564951%29_%28cropped%29.jpg/300px-Claude_Mak%C3%A9l%C3%A9l%C3%A9_%2853557564951%29_%28cropped%29.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Roy Keane",
+    "position": "CDM",
+    "altPositions": [
+      "CM"
+    ],
+    "club": "Manchester United",
+    "rating": 91,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Roy_keane_2014.jpg/300px-Roy_keane_2014.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Steven Gerrard",
+    "position": "CM",
+    "altPositions": [
+      "CDM",
+      "CAM",
+      "RW"
+    ],
+    "club": "Liverpool",
+    "rating": 95,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Steven_Gerrard_2018.jpg/300px-Steven_Gerrard_2018.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Frank Lampard",
+    "position": "CM",
+    "altPositions": [
+      "CAM"
+    ],
+    "club": "Chelsea",
+    "rating": 93,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Frank_Lampard_2019.jpg/300px-Frank_Lampard_2019.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Paul Scholes",
+    "position": "CM",
+    "altPositions": [
+      "CAM",
+      "CDM"
+    ],
+    "club": "Manchester United",
+    "rating": 92,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/P_Scholes.jpg/300px-P_Scholes.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Kevin De Bruyne",
+    "position": "CM",
+    "altPositions": [
+      "CAM",
+      "RW"
+    ],
+    "club": "Manchester City",
+    "rating": 94,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kevin_De_Bruyne_USMNT_v_Belgium_Mar_28_2026-64_%28cropped%29.jpg/300px-Kevin_De_Bruyne_USMNT_v_Belgium_Mar_28_2026-64_%28cropped%29.jpg"
+  },
+  {
+    "id": 28,
+    "name": "David Silva",
+    "position": "CAM",
+    "altPositions": [
+      "CM",
+      "LW"
+    ],
+    "club": "Manchester City",
+    "rating": 91,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/David_Silva_2017.jpg/300px-David_Silva_2017.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Michael Carrick",
+    "position": "CM",
+    "altPositions": [
+      "CDM"
+    ],
+    "club": "Manchester United",
+    "rating": 87,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Michael_Carrick_12042025_%285%29_%28cropped%29.jpg/300px-Michael_Carrick_12042025_%285%29_%28cropped%29.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Bryan Robson",
+    "position": "CM",
+    "altPositions": [
+      "CDM",
+      "CAM"
+    ],
+    "club": "Manchester United",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bryan_Robson_Thailand_2009-11-01_%282%29.jpg/300px-Bryan_Robson_Thailand_2009-11-01_%282%29.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Graeme Souness",
+    "position": "CM",
+    "altPositions": [
+      "CDM"
+    ],
+    "club": "Liverpool",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Souness_%28retouched%29.jpg/300px-Souness_%28retouched%29.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Yaya Toure",
+    "position": "CM",
+    "altPositions": [
+      "CDM",
+      "CAM"
+    ],
+    "club": "Manchester City",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Yaya_Tour%C3%A9_%28cropped%29.jpg/300px-Yaya_Tour%C3%A9_%28cropped%29.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Thierry Henry",
+    "position": "ST",
+    "altPositions": [
+      "LW",
+      "CAM"
+    ],
+    "club": "Arsenal",
+    "rating": 95,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Thierry_Henry_%2851649035951%29_%28cropped%29.jpg/300px-Thierry_Henry_%2851649035951%29_%28cropped%29.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Alan Shearer",
+    "position": "ST",
+    "altPositions": [],
+    "club": "Newcastle United",
+    "rating": 94,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Alan_Shearer_2008.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Wayne Rooney",
+    "position": "ST",
+    "altPositions": [
+      "CAM",
+      "CM"
+    ],
+    "club": "Manchester United",
+    "rating": 93,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wayne_Rooney_%2850121495731%29_%28cropped%29.jpg/300px-Wayne_Rooney_%2850121495731%29_%28cropped%29.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Cristiano Ronaldo",
+    "position": "LW",
+    "altPositions": [
+      "ST",
+      "RW"
+    ],
+    "club": "Manchester United",
+    "rating": 95,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_%28cropped%29.jpg/300px-Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_%28cropped%29.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Mohamed Salah",
+    "position": "RW",
+    "altPositions": [
+      "ST",
+      "LW"
+    ],
+    "club": "Liverpool",
+    "rating": 92,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_%28cropped%29.jpg/300px-Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_%28cropped%29.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Eden Hazard",
+    "position": "LW",
+    "altPositions": [
+      "CAM",
+      "RW"
+    ],
+    "club": "Chelsea",
+    "rating": 91,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg/300px-Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Sergio Aguero",
+    "position": "ST",
+    "altPositions": [
+      "LW"
+    ],
+    "club": "Manchester City",
+    "rating": 93,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ag%C3%BCero_in_2018.jpg/300px-Ag%C3%BCero_in_2018.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Dennis Bergkamp",
+    "position": "CAM",
+    "altPositions": [
+      "ST",
+      "CM"
+    ],
+    "club": "Arsenal",
+    "rating": 92,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dennis_Bergkamp_2014_%28cropped%29.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Robert Pires",
+    "position": "LW",
+    "altPositions": [
+      "RW",
+      "CAM"
+    ],
+    "club": "Arsenal",
+    "rating": 89,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Robert_Pires_2011.jpg/300px-Robert_Pires_2011.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Robbie Fowler",
+    "position": "ST",
+    "altPositions": [
+      "RW"
+    ],
+    "club": "Liverpool",
+    "rating": 88,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Fowler%2C_Robbie.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Les Ferdinand",
+    "position": "ST",
+    "altPositions": [],
+    "club": "Newcastle United",
+    "rating": 87,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/LesFerdinandMay2015_%28cropped%29.JPG/300px-LesFerdinandMay2015_%28cropped%29.JPG"
+  },
+  {
+    "id": 44,
+    "name": "Dwight Yorke",
+    "position": "ST",
+    "altPositions": [
+      "CAM"
+    ],
+    "club": "Manchester United",
+    "rating": 87,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dwight_Yorke_in_Chennai.jpg/300px-Dwight_Yorke_in_Chennai.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Michael Owen",
+    "position": "ST",
+    "altPositions": [
+      "RW"
+    ],
+    "club": "Liverpool",
+    "rating": 89,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Michael_Owen.jpg/300px-Michael_Owen.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Sadio Mane",
+    "position": "LW",
+    "altPositions": [
+      "ST",
+      "RW"
+    ],
+    "club": "Liverpool",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Sadio_Mane_France_v_Senegal_16_June_2026-450.jpg/300px-Sadio_Mane_France_v_Senegal_16_June_2026-450.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Harry Kane",
+    "position": "ST",
+    "altPositions": [
+      "CAM"
+    ],
+    "club": "Tottenham Hotspur",
+    "rating": 91,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Harry_Kane_England_v_Ghana_23_June_2026-219_%28cropped%29.jpg/300px-Harry_Kane_England_v_Ghana_23_June_2026-219_%28cropped%29.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Gareth Bale",
+    "position": "LW",
+    "altPositions": [
+      "RW",
+      "ST"
+    ],
+    "club": "Tottenham Hotspur",
+    "rating": 89,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2832%29_2.png/300px-2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2832%29_2.png"
+  },
+  {
+    "id": 49,
+    "name": "Son Heung-min",
+    "position": "LW",
+    "altPositions": [
+      "ST",
+      "RW"
+    ],
+    "club": "Tottenham Hotspur",
+    "rating": 88,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg/300px-BFA_2023_-2_Heung-Min_Son_%28cropped%29.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Robin van Persie",
+    "position": "ST",
+    "altPositions": [
+      "LW"
+    ],
+    "club": "Arsenal/Manchester United",
+    "rating": 90,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Loco-Fener_%2810%29.jpg/300px-Loco-Fener_%2810%29.jpg"
+  }
 ]
