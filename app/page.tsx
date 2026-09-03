@@ -19,29 +19,41 @@ interface AIResponse {
 
 const POSITION_LABELS: Record<string, string> = {
   GK: "Goalkeeper",
-  DEF: "Defender",
-  MID: "Midfielder",
-  FWD: "Forward",
+  CB: "Centre Back",
+  LB: "Left Back",
+  RB: "Right Back",
+  CDM: "Defensive Mid",
+  CM: "Central Mid",
+  CAM: "Attacking Mid",
+  LW: "Left Wing",
+  RW: "Right Wing",
+  ST: "Striker",
 };
 
 const POSITION_COLORS: Record<string, { bg: string; text: string }> = {
   GK: { bg: "bg-amber-500", text: "text-amber-500" },
-  DEF: { bg: "bg-sky-500", text: "text-sky-500" },
-  MID: { bg: "bg-emerald-500", text: "text-emerald-500" },
-  FWD: { bg: "bg-rose-500", text: "text-rose-500" },
+  CB: { bg: "bg-sky-500", text: "text-sky-500" },
+  LB: { bg: "bg-sky-400", text: "text-sky-400" },
+  RB: { bg: "bg-sky-400", text: "text-sky-400" },
+  CDM: { bg: "bg-emerald-500", text: "text-emerald-500" },
+  CM: { bg: "bg-emerald-400", text: "text-emerald-400" },
+  CAM: { bg: "bg-emerald-300", text: "text-emerald-300" },
+  LW: { bg: "bg-rose-500", text: "text-rose-500" },
+  RW: { bg: "bg-rose-500", text: "text-rose-500" },
+  ST: { bg: "bg-rose-400", text: "text-rose-400" },
 };
 
 const PITCH_LAYOUT = [
-  { slot: 0, position: "FWD", x: 50, y: 12, label: "ST" },
-  { slot: 1, position: "FWD", x: 22, y: 24, label: "LW" },
-  { slot: 2, position: "FWD", x: 78, y: 24, label: "RW" },
-  { slot: 3, position: "MID", x: 32, y: 40, label: "CM" },
-  { slot: 4, position: "MID", x: 50, y: 44, label: "CDM" },
-  { slot: 5, position: "MID", x: 68, y: 40, label: "CM" },
-  { slot: 6, position: "DEF", x: 14, y: 60, label: "LB" },
-  { slot: 7, position: "DEF", x: 35, y: 64, label: "CB" },
-  { slot: 8, position: "DEF", x: 65, y: 64, label: "CB" },
-  { slot: 9, position: "DEF", x: 86, y: 60, label: "RB" },
+  { slot: 0, position: "ST", x: 50, y: 12, label: "ST" },
+  { slot: 1, position: "LW", x: 22, y: 24, label: "LW" },
+  { slot: 2, position: "RW", x: 78, y: 24, label: "RW" },
+  { slot: 3, position: "CM", x: 32, y: 40, label: "CM" },
+  { slot: 4, position: "CDM", x: 50, y: 44, label: "CDM" },
+  { slot: 5, position: "CM", x: 68, y: 40, label: "CM" },
+  { slot: 6, position: "LB", x: 14, y: 60, label: "LB" },
+  { slot: 7, position: "CB", x: 35, y: 64, label: "CB" },
+  { slot: 8, position: "CB", x: 65, y: 64, label: "CB" },
+  { slot: 9, position: "RB", x: 86, y: 60, label: "RB" },
   { slot: 10, position: "GK", x: 50, y: 84, label: "GK" },
 ];
 
@@ -384,12 +396,12 @@ export default function Home() {
                 </div>
 
                 {/* Filter Chips */}
-                <div className="flex gap-1.5 mt-3">
-                  {(["All", "GK", "DEF", "MID", "FWD"] as const).map((filter) => (
+                <div className="flex flex-wrap gap-1.5 mt-3">
+                  {(["All", "GK", "CB", "LB", "RB", "CDM", "CM", "CAM", "LW", "RW", "ST"] as const).map((filter) => (
                     <button
                       key={filter}
                       onClick={() => setSearchQuery(filter === "All" ? "" : filter)}
-                      className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                      className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
                         (filter === "All" && searchQuery === "") ||
                         searchQuery === filter
                           ? "bg-purple-600 text-white shadow-sm shadow-purple-500/25"
