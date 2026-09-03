@@ -14,7 +14,7 @@ npm install
 
 ### 2. Set Up API Key
 
-Copy the example env file and add your OpenAI API key:
+Copy the example env file and add your Groq API key:
 
 ```bash
 cp .env.local.example .env.local
@@ -23,10 +23,10 @@ cp .env.local.example .env.local
 Edit `.env.local` and replace with your key:
 
 ```
-OPENAI_API_KEY=sk-your-key-here
+GROQ_API_KEY=gsk-your-key-here
 ```
 
-> Get a key at https://platform.openai.com/api-keys
+> Get a key at https://console.groq.com
 
 ### 3. Run
 
@@ -47,4 +47,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 - [Next.js](https://nextjs.org) 16 + TypeScript
 - [Tailwind CSS](https://tailwindcss.com) v4
-- OpenAI API for squad rating
+- [Groq API](https://groq.com) for AI squad rating (Llama 3.3 70B)

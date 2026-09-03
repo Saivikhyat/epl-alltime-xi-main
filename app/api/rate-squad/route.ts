@@ -35,16 +35,16 @@ export async function POST(request: Request) {
       .map((p) => `${p.name} (${p.position}, ${p.club})`)
       .join(", ");
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
-        { error: "OPENAI_API_KEY not configured" },
+        { error: "GROQ_API_KEY not configured" },
         { status: 500 }
       );
     }
 
     const response = await fetch(
-      "https://api.openai.com/v1/chat/completions",
+      "https://api.groq.com/openai/v1/chat/completions",
       {
         method: "POST",
         headers: {
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "gpt-3.5-turbo",
+          model: "llama-3.3-70b-versatile",
           messages: [
             {
               role: "system",
